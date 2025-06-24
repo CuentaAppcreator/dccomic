@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Universo Marvel</title>
+  <title>DC</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <style>
@@ -25,7 +25,7 @@
 </head>
 <body class="relative min-h-screen bg-black text-white overflow-x-hidden">
 
-  <!-- Fondo -->
+
   <div class="absolute inset-0 z-0 h-[60vh] md:h-[70vh]">
     <img
       src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzUs-BGoaNiw6BdKGAcy9DdP7EcptdwTiKjKfZQrQQYXirXS7dIXzfwX_aiOcAVYub0OvDo12wkFxfsrY25uHF5tpiLncv4TjCZU0-CF6ygd1kaQ8PY6EH6vBZ6P7prq6g33hP7tJoeh2Gjb4Nu07uHpFbpN-T93VvlrCL29HAPqiVs_akbOixMXVAQZsK/s1472/TJEZ.jpeg"
@@ -36,10 +36,9 @@
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
   </div>
 
-  <!-- Contenido -->
   <div class="relative z-10">
 
-    <!-- Header -->
+  
     <header id="main-header" class="pt-4 px-4 flex items-center space-x-4 text-white">
 <a href="javascript:window.history.back();" aria-label="Volver" class="text-white text-2xl">
   <i class="fas fa-chevron-left"></i>
@@ -50,14 +49,14 @@
            class="h-7 object-contain" />
       <h1 id="header-title" class="ml-4 text-xl font-normal opacity-0 whitespace-nowrap"></h1>
       <div class="flex-1"></div>
-      <!-- Recomendadas aparece solo al hacer scroll -->
+     
       <button id="header-recomendadas" class="opacity-0 transition-opacity duration-300 border border-white rounded-full px-3 py-1 text-sm flex items-center space-x-1">
         <i class="fas fa-random"></i> <span>Aleatorio</span>
       </button>
     </header>
 <main class="px-3 pb-6 pt-14">
 
-  <!-- Título y botón aleatorio -->
+
   <div class="flex justify-between items-center mb-3">
     <h1 id="main-title" class="text-3xl font-normal">Dc Comics</h1>
     <button id="btn-recomendadas" class="border border-white rounded-full px-3 py-1 text-sm flex items-center">
@@ -65,21 +64,20 @@
     </button>
   </div>
 
-  <!-- Descripción -->
   <p id="description" class="text-white text-base mb-4 max-w-xl leading-relaxed">
-De Gotham a Metrópolis, de la Isla Paraíso al Reino de Atlantis,
-los héroes de DC Comics — Batman, Superman, Wonder Woman, Flash y muchos más —
-definen el verdadero significado del heroísmo, enfrentando desafíos que trascienden mundos y tiempos.
+De Gotham a Metropolis, de la Isla Paraiso al Reino de Atlantis,
+los heroes de DC Comics — Batman, Superman, Wonder Woman, Flash y muchos mas —
+definen el verdadero significado del heroismo, enfrentando desafios que trascienden mundos y tiempos.
   </p>
 
-  <!-- Total -->
+
   <div class="flex items-center justify-center text-white text-sm mb-4 space-x-3">
     <div class="border-b border-white w-16"></div>
     <span id="contenido-total" class="whitespace-nowrap">Contenido: 0</span>
     <div class="border-b border-white w-16"></div>
   </div>
 
-  <!-- Contenedor de carteles -->
+  
   <div id="posters-grid" class="grid grid-cols-3 sm:grid-cols-[repeat(auto-fit,_minmax(140px,_1fr))] gap-3 mt-3">
     <!--PEGAR CONTENIDO AQUI ABAJO-->
 
@@ -391,7 +389,7 @@ definen el verdadero significado del heroísmo, enfrentando desafíos que trasci
 
     observer.observe(description);
 
-    // Función para mezclar elementos aleatoriamente
+  
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -410,7 +408,7 @@ definen el verdadero significado del heroísmo, enfrentando desafíos que trasci
     mainBtnRecomendadas.addEventListener('click', reorganizarPeliculas);
     headerBtnRecomendadas.addEventListener('click', reorganizarPeliculas);
 	
-// Mostrar el total de carteles
+
 const totalContenedor = document.getElementById('contenido-total');
 function actualizarTotalContenido() {
   const total = postersGrid.querySelectorAll('a').length;
